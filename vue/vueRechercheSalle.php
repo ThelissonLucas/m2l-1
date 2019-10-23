@@ -17,5 +17,4 @@
     ?>
     <br /><br />
     <input type="submit" value="Rechercher" />
-
 </form>
