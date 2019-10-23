@@ -2,10 +2,10 @@
 
 function controleurPrincipal($action) {
     $lesActions = array();
-    $lesActions["defaut"] = "listeRestos.php";
-    $lesActions["liste"] = "listeRestos.php";
-    $lesActions["detail"] = "detailResto.php";
-    $lesActions["recherche"] = "rechercheResto.php";
+    $lesActions["defaut"] = "listeSalles.php";
+    $lesActions["liste"] = "listeSalles.php";
+    $lesActions["detail"] = "detailSalle.php";
+    $lesActions["recherche"] = "rechercheSalle.php";
     $lesActions["connexion"] = "connexion.php";
     $lesActions["deconnexion"] = "deconnexion.php";
     $lesActions["profil"] = "monProfil.php";

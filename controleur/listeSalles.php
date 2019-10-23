@@ -9,7 +9,7 @@ include_once "$racine/modele/bd.photo.inc.php";
 ;
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
-$listeRestos = getRestos();
+$listeSalles = getSalles();
 
 // traitement si necessaire des donnees recuperees
 ;

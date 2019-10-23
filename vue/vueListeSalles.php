@@ -2,7 +2,7 @@
 <h1>Liste des salles</h1>
 
 <?php
-for ($i = 0; $i < count($listeRestos); $i++) {
+for ($i = 0; $i < count($listeSalles); $i++) {
 
 //    $lesPhotos = getPhotosByIdR($listeRestos[$i]['idR']);
     ?>
@@ -15,12 +15,12 @@ for ($i = 0; $i < count($listeRestos); $i++) {
 
 
         </div> -->
-        <div class="descrCard"><?php echo "<a href='./?action=detail&nSalle=" . $listeRestos[$i]['nSalle'] . "'>" . $listeRestos[$i]['nomSalle'] . "</a>"; ?>
+        <div class="descrCard"><?php echo "<a href='./?action=detail&nSalle=" . $listeSalles[$i]['nSalle'] . "'>" . $listeSalles[$i]['nomSalle'] . "</a>"; ?>
             <br />
-          <p> Adresse IP : <?= $listeRestos[$i]["indIP"] ?> </p>
+          <p> Adresse IP : <?= $listeSalles[$i]["indIP"] ?> </p>
             <br />
 
-          <p>  Nombre de postes : <?= $listeRestos[$i]["nbPoste"] ?> </p>
+          <p>  Nombre de postes : <?= $listeSalles[$i]["nbPoste"] ?> </p>
         </div>
     </div>
 
