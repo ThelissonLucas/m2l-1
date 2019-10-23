@@ -1,5 +1,5 @@
 
-<h1>Recherche d'un restaurant</h1>
+<h1>Recherche d'une salle</h1>
 <form action="./?action=recherche&critere=<?= $critere ?>" method="POST">
 
 

@@ -2,7 +2,7 @@
 
 include_once "bd.inc.php";
 
-function getTypesCuisine() {
+function getTypesSalle() {
     $resultat = array();
 
     try {
@@ -22,7 +22,7 @@ function getTypesCuisine() {
     return $resultat;
 }
 
-function getTypesCuisinePreferesByMailU($mailU) {
+function getTypesSallePreferesByMailU($mailU) {
     $resultat = array();
 
     try {
@@ -43,7 +43,7 @@ function getTypesCuisinePreferesByMailU($mailU) {
     return $resultat;
 }
 
-function getTypesCuisineNonPreferesByMailU($mailU) {
+function getTypesSalleNonPreferesByMailU($mailU) {
     $resultat = array();
 
     try {
@@ -64,7 +64,7 @@ function getTypesCuisineNonPreferesByMailU($mailU) {
     return $resultat;
 }
 
-function getTypesCuisineByIdR($idR){
+function getTypesSalleByIdR($idR){
     $resultat = array();
 
     try {
@@ -86,22 +86,7 @@ function getTypesCuisineByIdR($idR){
     
 }
 
-if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
-    // prog principal de test
-    header('Content-Type:text/plain');
 
-    echo "getTypesCuisine() : \n";
-    print_r(getTypesCuisine());
-    
-    echo "getTypesCuisinePreferesByMailU(mailU) : \n";
-    print_r(getTypesCuisinePreferesByMailU("test@bts.sio"));
-    
-    echo "getTypesCuisineNonPreferesByMailU(mailU) : \n";
-    print_r(getTypesCuisineNonPreferesByMailU("test@bts.sio"));
-    
-    echo "getTypesCuisineByIdR(idR) : \n";
-    print_r(getTypesCuisineByIdR(4));
-}
 ?>
 
 

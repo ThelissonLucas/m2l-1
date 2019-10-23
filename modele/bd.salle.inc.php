@@ -2,7 +2,7 @@
 
 include_once "bd.inc.php";
 
-function getRestoByIdR($idR) {
+function getSalleByIdR($idR) {
 
     try {
         $cnx = connexionPDO();
@@ -40,7 +40,7 @@ function getPosteBySalle($nSalle) {
     return $resultat;
 }
 
-function getRestos() {
+function getSalles() {
     $resultat = array();
 
     try {
@@ -83,7 +83,7 @@ function getPostes() {
 
 
 
-function getRestosByNomR($nomSalle) {
+function getSalleByNomR($nomSalle) {
     $resultat = array();
 
     try {
@@ -107,7 +107,7 @@ function getRestosByNomR($nomSalle) {
 
 
 
-function getRestosByAdresse($indIP) {
+function getSalleByAdresse($indIP) {
     $resultat = array();
 
     try {
@@ -129,7 +129,7 @@ function getRestosByAdresse($indIP) {
 }
 
 
-function getRestosAimesByMailU($mailU) {
+function getSalleAimesByMailU($mailU) {
     $resultat = array();
 
     try {
@@ -150,23 +150,4 @@ function getRestosAimesByMailU($mailU) {
     return $resultat;
 }
 
-if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
-    // prog principal de test
-    header('Content-Type:text/plain');
-
-    echo "getRestos() : \n";
-    print_r(getRestos());
-
-    echo "getRestoByIdR(1) : \n";
-    print_r(getRestoByIdR(1));
-
-    echo "getRestosByNomR('charcut') : \n";
-    print_r(getRestosByNomR("charcut"));
-
-    echo "getRestosByAdresse(voieAdrR, cpR, villeR) : \n";
-    print_r(getRestosByAdresse("Ravel", "33000", "Bordeaux"));
-    
-    echo "getRestosAimesByMailU(mailU) : \n";
-    print_r(getRestosAimesByMailU("test@bts.sio"));
-}
 ?>

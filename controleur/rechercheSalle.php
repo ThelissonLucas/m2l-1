@@ -2,8 +2,8 @@
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
-include_once "$racine/modele/bd.resto.inc.php";
-include_once "$racine/modele/bd.typecuisine.inc.php";
+include_once "$racine/modele/bd.salle.inc.php";
+include_once "$racine/modele/bd.typesalle.inc.php";
 include_once "$racine/modele/bd.photo.inc.php";
 
 // creation du menu burger
