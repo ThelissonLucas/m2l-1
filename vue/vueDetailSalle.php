@@ -1,3 +1,6 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
 <h1><?= $unResto['nomSalle']; ?> </h1>
 

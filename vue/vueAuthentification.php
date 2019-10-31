@@ -1,3 +1,7 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
 <h1>Connexion</h1>
 <form action="./?action=connexion" method="POST">
 

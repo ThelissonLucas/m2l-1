@@ -1,1 +1,3 @@
-<h1> Bravo t'as réussi mon con </h1>
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>

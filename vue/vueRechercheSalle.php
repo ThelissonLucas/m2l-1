@@ -1,3 +1,6 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
 <h1>Recherche d'une salle</h1>
 <form action="./?action=recherche&critere=<?= $critere ?>" method="POST">
@@ -13,8 +16,8 @@
             break;
         case "adresse":
             ?>
-    }
-    ?>
-    <br /><br />
+    }   
+    <br />
     <input type="submit" value="Rechercher" />
+
 </form>
