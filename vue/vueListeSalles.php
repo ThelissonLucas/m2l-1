@@ -1,38 +1,44 @@
 <head>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<h1>Liste des salles</h1>
 
-<?php
-for ($i = 0; $i < count($listeSalles); $i++) {
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Liste des salles</h1>
 
-//    $lesPhotos = getPhotosByIdR($listeRestos[$i]['idR']);
-    ?>
+            <?php
+            for ($i = 0; $i < count($listeSalles); $i++) {
 
-    <div class="card">
-        <!--<div class="photoCard">
-            <?php if (count($lesPhotos) > 0) { ?>
-                <img src="photos/<?= $lesPhotos[0]["cheminP"] ?>" alt="photo du restaurant" />
-            <?php } ?>
+            //    $lesPhotos = getPhotosByIdR($listeRestos[$i]['idR']);
+                ?>
+
+                <div class="card">
+                    <!--<div class="photoCard">
+                        <?php if (count($lesPhotos) > 0) { ?>
+                            <img src="photos/<?= $lesPhotos[0]["cheminP"] ?>" alt="photo du restaurant" />
+                        <?php } ?>
 
 
-        </div> -->
-        <div class="descrCard"><?php echo "<a href='./?action=detail&nSalle=" . $listeSalles[$i]['nSalle'] . "'>" . $listeSalles[$i]['nomSalle'] . "</a>"; ?>
-            <br />
-          <p> Adresse IP : <?= $listeSalles[$i]["indIP"] ?> </p>
-            <br />
+                    </div> -->
+                    <div class="descrCard"><?php echo "<a href='./?action=detail&nSalle=" . $listeSalles[$i]['nSalle'] . "'>" . $listeSalles[$i]['nomSalle'] . "</a>"; ?>
+                        <br />
+                    <p> Adresse IP : <?= $listeSalles[$i]["indIP"] ?> </p>
+                        <br />
 
-          <p>  Nombre de postes : <?= $listeSalles[$i]["nbPoste"] ?> </p>
-        </div>
+                    <p>  Nombre de postes : <?= $listeSalles[$i]["nbPoste"] ?> </p>
+                    </div>
+                </div>
+
+
+
+
+
+                <?php
+            }
+            ?>
+        <div>
     </div>
-
-
-
-
-
-    <?php
-}
-?>
-
+</body>
 

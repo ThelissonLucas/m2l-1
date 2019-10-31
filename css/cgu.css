@@ -1,9 +1,9 @@
 @CHARSET "UTF-8";
 
 
-h1,h2,h3,h4 {
-    font-family: Futura;	
-    background-color : rgba(0,0,0,0.1);
+h1,h2,h2,h4{
+    text-decoration : underlined;
+    background-color: gainsboro;
 }
 
 td.cell {

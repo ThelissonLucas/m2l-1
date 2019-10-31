@@ -10,9 +10,12 @@
             @import url("css/corps.css");
         </style>
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+
+    <div class="container">
+
     <nav>
             
         <ul id="menuGeneral">
@@ -51,3 +54,4 @@
     </ul>
 
     <div id="corps">
+    
