@@ -3,21 +3,23 @@
 </head>
 
 <h1>Recherche d'une salle</h1>
+<!--
 <form action="./?action=recherche&critere=<?= $critere ?>" method="POST">
 
 
-    <?php
+   < ?php
     switch ($critere) {
         case "nom":
             ?>
             Recherche par nom : <br />
-            <input type="text" name="nomSalle" placeholder="nom" value="<?= $nomSalle ?>" /><br />
-            <?php
+            <input type="text" name="nomSalle" placeholder="nom" value="< ?= $nomSalle ?>" /><br />
+            < ?php
             break;
-        case "adresse":
             ?>
     }   
     <br />
     <input type="submit" value="Rechercher" />
-
-</form>
+    
+</form> 
+< ?php ?>
+-->

@@ -15,7 +15,7 @@ $listeSalles = getSalles();
 ;
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
-$titre = "Liste des restaurants répertoriés";
+$titre = "Liste des salles";
 include "$racine/vue/entete.html.php";
 include "$racine/vue/vueListeSalles.php";
 include "$racine/vue/pied.html.php";

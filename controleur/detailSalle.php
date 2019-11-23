@@ -12,13 +12,13 @@ include_once "$racine/modele/bd.typesalle.inc.php";
 $idR = $_GET["nSalle"]; 
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
-$unResto = getSalleByIdR($idR);
+$unSalle = getSalleByIdR($idR);
 $unPoste = getPostebySalle($idR);
 
 
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
-$titre = "detail d'un restaurant";
+$titre = "Detail de la salle";
 include "$racine/vue/entete.html.php";
 include "$racine/vue/vueDetailSalle.php";
 include "$racine/vue/pied.html.php";

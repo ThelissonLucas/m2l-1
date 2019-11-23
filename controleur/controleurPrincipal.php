@@ -9,9 +9,11 @@ function controleurPrincipal($action) {
     $lesActions["connexion"] = "connexion.php";
     $lesActions["deconnexion"] = "deconnexion.php";
     $lesActions["profil"] = "monProfil.php";
-    $lesActions["cgu"] = "cgu.php";
-    $lesActions["aimer"] = "aimer.php";
     $lesActions["inscription"] = "inscription.php";
+    $lesActions["gestion"] = "gestion.php";
+    $lesActions["creer"] = "creer.php";
+    $lesActions["supprimer"] = "supprimer.php";
+
 
     if (array_key_exists($action, $lesActions)) {
         return $lesActions[$action];
