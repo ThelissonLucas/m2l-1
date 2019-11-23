@@ -13,13 +13,13 @@ $msg="";
 if (isset($_POST["nSalle"]) && isset($_POST["nomSalle"]) && isset($_POST["nbPoste"])&& isset($_POST["indIP"])) {
 
     if ($_POST["nSalle"] != "" && $_POST["nomSalle"] != "" && $_POST["nbPoste"] != "" && $_POST["indIP"] != "") {
-        $nSalle = $_POST["nSalle"];
+        $numSalle = $_POST["nSalle"];
         $nomSalle = $_POST["nomSalle"];
         $nbPoste = $_POST["nbPoste"];
         $indIP = $_POST["indIP"];
 
         // enregistrement des donnees
-        $ret = addSalle($nSalle, $nomSalle, $nbPoste, $indIP);
+        $ret = addSalle($numSalle, $nomSalle, $nbPoste, $indIP);
         if ($ret) {
             $cree = true;
         } else {
