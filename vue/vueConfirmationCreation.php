@@ -1,3 +1,3 @@
-<h1> Confirmation de la création d'une salle</h1>
+<h1> Confirmation de la création d'un poste</h1>
 
-Votre salle a bien été créée !
+Votre poste a bien été créée !

@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 include_once "bd.inc.php";
 
@@ -6,7 +6,7 @@ function getUtilisateurs() {
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("select * from utilisateur");
+        $req = $cnx->prepare("select * from mrbs_users");
         $req->execute();
 
         $ligne = $req->fetch(PDO::FETCH_ASSOC);
@@ -25,7 +25,7 @@ function getUtilisateurByMailU($mailU) {
 
     try {
         $cnx = connexionPDO();
-        $req = $cnx->prepare("select * from utilisateur where mailU=:mailU");
+        $req = $cnx->prepare("select * from mrbs_users where email=:mailU");
         $req->bindValue(':mailU', $mailU, PDO::PARAM_STR);
         $req->execute();
         
@@ -42,7 +42,7 @@ function addUtilisateur($mailU, $mdpU, $pseudoU) {
         $cnx = connexionPDO();
 
         $mdpUCrypt = crypt($mdpU, "sel");
-        $req = $cnx->prepare("insert into utilisateur (mailU, mdpU, pseudoU) values(:mailU,:mdpU,:pseudoU)");
+        $req = $cnx->prepare("insert into mrbs_users (mailU, mdpU, pseudoU) values(:mailU,:mdpU,:pseudoU)");
         $req->bindValue(':mailU', $mailU, PDO::PARAM_STR);
         $req->bindValue(':mdpU', $mdpUCrypt, PDO::PARAM_STR);
         $req->bindValue(':pseudoU', $pseudoU, PDO::PARAM_STR);
@@ -71,3 +71,5 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     addUtilisateur("mathieu.capliez3@gmail.com", "azerty", "mat");
 }
 ?>
+
+-->

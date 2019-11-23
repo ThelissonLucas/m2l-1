@@ -1,1 +1,1 @@
-<h1> Supprimer une salle </h1>
+<h1> Supprimer un poste </h1>

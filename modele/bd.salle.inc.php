@@ -150,22 +150,4 @@ function getSalleAimesByMailU($mailU) {
     return $resultat;
 }
 
-//ajouter une salle
-function addSalle($numSalle, $nomSalle, $nbPoste, $indIP){
-        try {
-            $cnx = connexionPDO();
-    
-            $req = $cnx->prepare("insert into salle (nSalle, nomSalle, nbPoste, indIP) values(:nSalle,:nomSalle,:nbPoste,:indIP)");
-            $req->bindValue(':nSalle', $numSalle, PDO::PARAM_STR);
-            $req->bindValue(':nomSalle', $nomSalle, PDO::PARAM_STR);
-            $req->bindValue(':nbPoste', $nbPoste, PDO::PARAM_STR);
-            $req->bindValue(':indIP', $indIP, PDO::PARAM_STR);
-            
-            $resultat = $req->execute();
-        } catch (PDOException $e) {
-            print "Erreur !: " . $e->getMessage();
-            die();
-        }
-        return $resultat;
-    }
 ?>
