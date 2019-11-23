@@ -22,5 +22,20 @@ function addPoste($nPoste, $nomPoste, $indIP, $ad, $typePoste, $nSalle) {
     return $resultat;
 }
 
+function delAimer($nPoste) {
+    $resultat = -1;
+    try {
+        $cnx = connexionPDO();
+
+        $req = $cnx->prepare("delete from poste where nPoste=:nPoste");
+        $req->bindValue(':idR', $idR, PDO::PARAM_INT);
+        
+        $resultat = $req->execute();
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+    return $resultat;
+}
 
 ?>

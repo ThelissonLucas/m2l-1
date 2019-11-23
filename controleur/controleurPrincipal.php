@@ -12,7 +12,7 @@ function controleurPrincipal($action) {
     $lesActions["inscription"] = "inscription.php";
     $lesActions["gestion"] = "gestion.php";
     $lesActions["creer"] = "creer.php";
-    $lesActions["supprimer"] = "supprimer.php";
+    $lesActions["modifier"] = "modifier.php";
 
 
     if (array_key_exists($action, $lesActions)) {
