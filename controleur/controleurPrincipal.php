@@ -13,6 +13,7 @@ function controleurPrincipal($action) {
     $lesActions["gestion"] = "gestion.php";
     $lesActions["creer"] = "creer.php";
     $lesActions["modifier"] = "modifier.php";
+    $lesActions["accueil"] = "accueil.php";
 
 
     if (array_key_exists($action, $lesActions)) {

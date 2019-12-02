@@ -1,5 +1,5 @@
 
-    <head>
+<head>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -12,11 +12,4 @@
 
 </form>
 <br />
-<a href="./?action=inscription">Inscription</a>
-
-<hr>
-Utilisateur de test : <br />
-login : test@bts.sio<br />
-mot de passe : sio
-
--->
+<button type="button" class="btn btn-light"><a href="./?action=inscription">Inscription</a></button>

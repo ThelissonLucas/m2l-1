@@ -10,10 +10,7 @@
 
             <?php
             for ($i = 0; $i < count($listeSalles); $i++) {
-
-            //    $lesPhotos = getPhotosByIdR($listeRestos[$i]['idR']);
                 ?>
-
                 <div class="card">
                     <!--<div class="photoCard">
                         <?php if (count($lesPhotos) > 0) { ?>
@@ -30,11 +27,6 @@
                     <p>  Nombre de postes : <?= $listeSalles[$i]["nbPoste"] ?> </p>
                     </div>
                 </div>
-
-
-
-
-
                 <?php
             }
             ?>

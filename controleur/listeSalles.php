@@ -3,7 +3,7 @@ if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
 include_once "$racine/modele/bd.salle.inc.php";
-include_once "$racine/modele/bd.photo.inc.php";
+
 
 // recuperation des donnees GET, POST, et SESSION
 ;
