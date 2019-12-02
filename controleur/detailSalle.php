@@ -5,7 +5,7 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
 }
 include_once "$racine/modele/bd.salle.inc.php";
 include_once "$racine/modele/authentification.inc.php";
-include_once "$racine/modele/bd.typesalle.inc.php";
+
 
 
 // recuperation des donnees GET, POST, et SESSION
