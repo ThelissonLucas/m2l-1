@@ -1,5 +1,8 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-<h1>Liste des restaurants</h1>
+<h1>Liste des Salles</h1>
 
 <?php
 for ($i = 0; $i < count($listeRestos); $i++) {

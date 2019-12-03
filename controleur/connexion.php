@@ -31,7 +31,7 @@ if (isLoggedOn()){ // si l'utilisateur est connecté on redirige vers le control
 }
 else{ // l'utilisateur n'est pas connecté, on affiche le formulaire de connexion
     // appel du script de vue 
-    $titre = "authentification";
+    $titre = "Connexion";
     include "$racine/vue/entete.html.php";
     include "$racine/vue/vueAuthentification.php";
     include "$racine/vue/pied.html.php";

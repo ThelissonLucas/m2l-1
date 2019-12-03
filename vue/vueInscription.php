@@ -1,3 +1,7 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
 <h1>Inscription</h1>
 <span id="alerte"><?= $msg ?></span>
 <form action="./?action=inscription" method="POST">

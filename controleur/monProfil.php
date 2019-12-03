@@ -4,8 +4,6 @@ if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
 }
 include_once "$racine/modele/authentification.inc.php";
 include_once "$racine/modele/bd.utilisateur.inc.php";
-include_once "$racine/modele/bd.typecuisine.inc.php";
-include_once "$racine/modele/bd.resto.inc.php";
 
 // creation du menu burger
 $menuBurger = array();
@@ -17,12 +15,9 @@ $menuBurger[] = Array("url"=>"./?action=updProfil","label"=>"Modifier mon profil
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 if (isLoggedOn()){
-    $mailU = getMailULoggedOn();
-    $util = getUtilisateurByMailU($mailU);
+    $email = getMailULoggedOn();
+    $util = getUtilisateurByEmail($email);
     
-    $mesRestosAimes = getRestosAimesByMailU($mailU);
-    
-    $mesTypeCuisineAimes = getTypesCuisinePreferesByMailU($mailU);
     // traitement si necessaire des donnees recuperees
 
 

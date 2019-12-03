@@ -1,14 +1,17 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-<h1><?= $unResto['nomSalle']; ?> </h1>
+<h1><?= $unSalle['nomSalle']; ?> </h1>
 
 <!-- Infos salles -->
 <h2 id="salle">
     Infos salle :
 </h2>
 <p>
-Adresse Ip :    <?= $unResto['indIP']; ?>
+Adresse Ip :    <?= $unSalle['indIP']; ?>
 <br />
-Nombre de postes :    <?= $unResto['nbPoste']; ?>
+Nombre de postes :    <?= $unSalle['nbPoste']; ?>
 </p>
 
 <!-- Infos postes --->

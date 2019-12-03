@@ -1,3 +1,8 @@
+
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
 <h1>Connexion</h1>
 <form action="./?action=connexion" method="POST">
 
@@ -7,10 +12,4 @@
 
 </form>
 <br />
-<a href="./?action=inscription">Inscription</a>
-
-<hr>
-Utilisateur de test : <br />
-login : test@bts.sio<br />
-mot de passe : sio
-
+<button type="button" class="btn btn-light"><a href="./?action=inscription">Inscription</a></button>

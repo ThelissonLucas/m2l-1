@@ -1,3 +1,6 @@
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
 <h1 id="cond">Conditions générales d'utilisation du site r3st0</h1>
 <p>
