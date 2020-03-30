@@ -1,8 +1,8 @@
 @CHARSET "UTF-8";
 
 h1,h2,h3,h4 {
-    font-family: sans-serif;	
-    background-color : rgba(34,34,34,1);
+    font-family: arial;	
+    background-color :rgb(38, 64, 139);
     font-weight:bold;
     border-radius: 5px;
     text-align: center;

@@ -229,3 +229,8 @@ nav {
 #alerte{
     background-color: #FC2500;
 }
+
+#col-md-4{
+    border-width: initial;
+    border-style: solid;
+}

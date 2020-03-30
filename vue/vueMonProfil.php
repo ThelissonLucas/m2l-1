@@ -7,7 +7,7 @@
 	<?php
 		$level = getLevelByMail($util["email"]);
 		if($level['level'] == 2){ ?>
-			<strong>Gestion des postes :</strong><br>
+			<h4>Gestion des postes : </h4>
 			<a href="./?action=creation">Créer </a><br>
             <a href="./?action=suppression">Supprimer</a><br>
 			<a href="./?action=modification">Modifier</a>

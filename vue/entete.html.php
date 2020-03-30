@@ -16,11 +16,8 @@
 
             <ul id="menuGeneral">
 
-                <li></li>
-                <li><a href="./?action=accueil">Accueil</a></li>
-                <li><a href="./?action=listeSalles">Liste salles </a></li>
                 <li id="logo"><a href="./?action=accueil"><img src="images/logoBarre.png" alt="logo" /></a></li>
-                <li></li>
+                <li><a href="./?action=listeSalles">Liste salles </a></li>               
                 <?php
                 if(isLoggedOn()){ ?>
                     <li><a href="./?action=profil"><img src="images/profil.png" alt="loupe" />Mon Profil</a></li>

@@ -15,7 +15,7 @@
 
 			<div class="col-md-4">
 				<p>Inscription : </p>
-				<a href="./?action=inscription">S'incrire ici</a>
+				<a href="./?action=inscription">S'inscrire</a>
 			</div>
 		</div>
 	</div>
