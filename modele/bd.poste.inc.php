@@ -143,25 +143,6 @@ function addPoste($nPoste, $nomPoste, $indIP, $ad, $typePoste, $nSalle) {
     return $resultat;
 }
 
-function updatePoste($nPoste,$nomPoste, $indIP, $ad, $typePoste, $nSalle) {
-    try {
-        $cnx = connexionPDO();
-
-        $req = $cnx->prepare("update poste set nPoste = :nPoste, nomPoste = :nomPoste, indIP = :indIP, ad = :ad, typePoste = :typePoste, nSalle = :nSalle) where nPoste = :nPoste");
-        $req->bindValue(':nPoste', $nPoste, PDO::PARAM_STR);
-        $req->bindValue(':nomPoste', $nomPoste, PDO::PARAM_STR);
-        $req->bindValue(':indIP', $indIP, PDO::PARAM_STR);
-        $req->bindValue(':ad', $ad, PDO::PARAM_STR);
-        $req->bindValue(':typePoste', $typePoste, PDO::PARAM_STR);
-        $req->bindValue(':nSalle', $nSalle, PDO::PARAM_STR);
-        
-        $resultat = $req->execute();
-    } catch (PDOException $e) {
-        print "Erreur !: " . $e->getMessage();
-        die();
-    }
-    return $resultat;
-}
 
 
 ?>
