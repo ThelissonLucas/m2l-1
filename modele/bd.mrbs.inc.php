@@ -1,9 +1,9 @@
 <?php
 
-function connexionPDO() {
+function connexionPDO1() {
     $login = "root";
     $mdp = "root";
-    $bd = "p4rcinfo";
+    $bd = "mrbs";
     $serveur = "127.0.0.1";
 
     try {
@@ -20,7 +20,7 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
     // prog de test
     header('Content-Type:text/plain');
 
-    echo "connexionPDO() : \n";
-    print_r(connexionPDO());
+    echo "connexionPDO1() : \n";
+    print_r(connexionPDO1());
 }
 ?>

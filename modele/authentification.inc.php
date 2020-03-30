@@ -2,17 +2,17 @@
 
 include_once "bd.utilisateur.inc.php";
 
-function login($email, $password) {
+function login($mailU, $mdpU) {
     if (!isset($_SESSION)) {
         session_start();
     }
 
-    $util = getUtilisateurByEmail($email);
+    $util = getUtilisateurByMailU($mailU);
     $mdpBD = $util["password"];
 
-    if (trim($mdpBD) == trim(crypt($password, $mdpBD))) {
+    if (trim($mdpBD) == trim(crypt($mdpU, $mdpBD))) {
         // le mot de passe est celui de l'utilisateur dans la base de donnees
-        $_SESSION["email"] = $email;
+        $_SESSION["email"] = $mailU;
         $_SESSION["password"] = $mdpBD;
     }
 }
@@ -43,7 +43,7 @@ function isLoggedOn() {
     $ret = false;
 
     if (isset($_SESSION["email"])) {
-        $util = getUtilisateurByEMail($_SESSION["email"]);
+        $util = getUtilisateurByMailU($_SESSION["email"]);
         if ($util["email"] == $_SESSION["email"] && $util["password"] == $_SESSION["password"]
         ) {
             $ret = true;
@@ -67,5 +67,23 @@ if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
 
     // deconnexion
     logout();
+}
+
+function register($nomU, $mailU, $password) {
+    try {
+        $cnx = connexionPDO1();
+ 
+        $mdpCrypt = crypt($password, "sel");
+        $req = $cnx->prepare("insert into mrbs_users (email, password, name) values(:mailU,:password,:nomU)");
+        $req->bindValue(':mailU', $mailU, PDO::PARAM_STR);
+        $req->bindValue(':password', $mdpCrypt, PDO::PARAM_STR);
+        $req->bindValue(':nomU', $nomU, PDO::PARAM_STR);
+        
+        $resultat = $req->execute();
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+    return $resultat;
 }
 ?>

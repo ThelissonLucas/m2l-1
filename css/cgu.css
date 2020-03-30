@@ -1,9 +1,12 @@
 @CHARSET "UTF-8";
 
-
-h1,h2,h2,h4{
-    text-decoration : underlined;
-    background-color: gainsboro;
+h1,h2,h3,h4 {
+    font-family: arial;	
+    background-color :rgb(38, 64, 139);
+    font-weight:bold;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
 }
 
 td.cell {
