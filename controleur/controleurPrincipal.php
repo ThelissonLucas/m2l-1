@@ -1,27 +1,26 @@
 <?php
 
-function controleurPrincipal($action) {
+function controleurPrincipal($action){
     $lesActions = array();
-    $lesActions["defaut"] = "accueil.php";
-    $lesActions["liste"] = "listeSalles.php";
+    $lesActions["defaut"] = "listeSalles.php";
+    $lesActions["liste"] = "listeSalless.php";
     $lesActions["detail"] = "detailSalle.php";
     $lesActions["recherche"] = "rechercheSalle.php";
     $lesActions["connexion"] = "connexion.php";
+    $lesActions["inscription"] = "inscription.php";
     $lesActions["deconnexion"] = "deconnexion.php";
     $lesActions["profil"] = "monProfil.php";
-    $lesActions["inscription"] = "inscription.php";
-    $lesActions["gestion"] = "gestion.php";
-    $lesActions["creer"] = "creer.php";
-    $lesActions["modifier"] = "modifier.php";
-    $lesActions["accueil"] = "accueil.php";
-
-
-    if (array_key_exists($action, $lesActions)) {
+    $lesActions["creation"] = "creation.php";
+    $lesActions["suppression"] = "suppression.php";
+    $lesActions["modification"] = "modification.php";
+    
+    if (array_key_exists ( $action , $lesActions )){
         return $lesActions[$action];
-    } 
-    else {
+    }
+    else{
         return $lesActions["defaut"];
     }
+
 }
 
 ?>

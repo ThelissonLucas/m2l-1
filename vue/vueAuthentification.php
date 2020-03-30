@@ -1,15 +1,29 @@
+<div class="container">
+    </br>
+	<h1>Connexion</h1>
+	</br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<form action="./?action=connexion" method="POST">
+				    <input type="text" name="mailU" placeholder="Email de connexion" /><br />
+				    <input type="password" name="mdpU" placeholder="Mot de passe"  /><br />
+				    </br>
+				    <button type="submit" value="submit" class="btn btn-dark">Connexion</button>
+				</form>
+			</div>
 
-<head>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-</head>
+			<div class="col-md-4">
+				<p>Inscription : </p>
+				<a href="./?action=inscription">S'incrire ici</a>
+			</div>
+		</div>
+	</div>
 
-<h1>Connexion</h1>
-<form action="./?action=connexion" method="POST">
+	<hr>
+	
+	Utilisateur de test : sio<br />
+	login : test@bts.sio<br />
+	mot de passe : sio
+</div>
 
-    <input type="text" name="mailU" placeholder="Email de connexion" /><br />
-    <input type="password" name="mdpU" placeholder="Mot de passe"  /><br />
-    <input type="submit" />
-
-</form>
-<br />
-<button type="button" class="btn btn-light"><a href="./?action=inscription">Inscription</a></button>

@@ -1,11 +1,13 @@
-  <?php
+<?php
 
-include_once "bd.inc.php";
+include "bd.mrbs.inc.php";
+include "bd.inc.php";
 
 function getUtilisateurs() {
+    $resultat = array();
 
     try {
-        $cnx = connexionPDO();
+        $cnx = connexionPDO1();
         $req = $cnx->prepare("select * from mrbs_users");
         $req->execute();
 
@@ -21,12 +23,40 @@ function getUtilisateurs() {
     return $resultat;
 }
 
-function getUtilisateurByEmail($email) {
+function getUtilisateurByMailU($mailU) {
+    $resultat = array();
 
     try {
-        $cnx = connexionPDO();
-        $req = $cnx->prepare("select * from mrbs_users where email=:email");
-        $req->bindValue(':email', $email, PDO::PARAM_STR);
+        $cnx = connexionPDO1();
+        $req = $cnx->prepare("select * from mrbs_users where email=:mailU");
+        $req->bindValue(':mailU', $mailU, PDO::PARAM_STR);
+        $req->execute();
+        
+        $resultat = $req->fetch(PDO::FETCH_ASSOC);
+    }
+    catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage();
+        die();
+    }
+    return $resultat;
+}
+
+if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
+    // prog principal de test
+    header('Content-Type:text/plain');
+
+    echo "getUtilisateurs() : \n";
+    print_r(getUtilisateurs());
+
+    echo "getUtilisateurByMailU('mathieu.capliez@gmail.com') : \n";
+    print_r(getUtilisateurByMailU("mathieu.capliez@gmail.com"));
+}
+
+function getLevelByMail($mailU){
+    try {
+        $cnx = connexionPDO1();
+        $req = $cnx->prepare("select level from mrbs_users where email=:mailU");
+        $req->bindValue(':mailU', $mailU, PDO::PARAM_STR);
         $req->execute();
         
         $resultat = $req->fetch(PDO::FETCH_ASSOC);
@@ -36,40 +66,4 @@ function getUtilisateurByEmail($email) {
     }
     return $resultat;
 }
-
-function addUtilisateur($email, $password, $name) {
-    try {
-        $cnx = connexionPDO();
-
-        $mdpCrypt = crypt($password, "sel");
-        $req = $cnx->prepare("insert into mrbs_users (email, password, name) values(:email,:password,:name)");
-        $req->bindValue(':email', $email, PDO::PARAM_STR);
-        $req->bindValue(':password', $mdpCrypt, PDO::PARAM_STR);
-        $req->bindValue(':name', $name, PDO::PARAM_STR);
-        
-        $resultat = $req->execute();
-    } catch (PDOException $e) {
-        print "Erreur !: " . $e->getMessage();
-        die();
-    }
-    return $resultat;
-}
-
-
-
-if ($_SERVER["SCRIPT_FILENAME"] == __FILE__) {
-    // prog principal de test
-    header('Content-Type:text/plain');
-
-    echo "getUtilisateurs() : \n";
-    print_r(getUtilisateurs());
-
-    echo "getUtilisateurByEmail(\"mathieu.capliez@gmail.com\") : \n";
-    print_r(getUtilisateurByEmail("mathieu.capliez@gmail.com"));
-
-    echo "addUtilisateur('mathieu.capliez3@gmail.com', 'azerty', 'mat') : \n";
-    addUtilisateur("mathieu.capliez3@gmail.com", "azerty", "mat");
-}
 ?>
-
--->
