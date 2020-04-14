@@ -4,7 +4,7 @@ if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
 }
 include_once "$racine/modele/authentification.inc.php";
 
-// recuperation des donnees GET, POST, et SESSION
+// recuperation des donnees GET, POST, et SESSION dhuzhudhzaudhzfb
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 
