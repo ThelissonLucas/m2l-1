@@ -1,7 +1,7 @@
 <div class="container">
     </br>
     <h1> Choix du poste </h1>
-    <form action="./?action=choixmodif" method="POST">
+    <form action="./?action=modification" method="POST">
         <div class="content">
                 <div class="row">
                     <div class="col-md-3">
@@ -23,7 +23,7 @@
 
         <div class="row">
                 <div class="col-md-3">
-                <a href="./?action=modification" class="btn btn-dark" type="submit">Choisir le poste a modifier</a>
+                <button class="btn btn-dark" type="submit">Choisir le poste a modifier</button>
                 </div>
         </div>                                
     </form>

@@ -10,11 +10,12 @@ include_once "$racine/modele/authentification.inc.php";
 if (isset($_POST["nPoste"]) && isset($_POST["nomPoste"]) && isset($_POST["typePoste"]) && isset($_POST["nSalle"])){
     $nPoste=$_POST["nPoste"];
     $nomPoste=$_POST["nomPoste"];
-    $typePoste=$_POST["typePoste"];
+    $typePoste=$_POST["typeyPoste"];
     $nSalle=$_POST["nSalle"];
-
+    
     // traitement si necessaire des donnees recuperees
-    modifierPoste($nPoste, $nomPoste, $typePoste, $nSalle);
+    modifierPoste($nPoste, $nomPoste, $typePoste, $nSalle); 
+    
     ?>
     <div class="alert alert-success">Poste modifié !</div>
 <?php
@@ -25,6 +26,7 @@ else
     $nomPoste="";
     $typePoste="";
     $nSalle="";
+    $info = getInfosPoste($nPoste);
 }
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
