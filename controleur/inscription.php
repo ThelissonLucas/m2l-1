@@ -7,7 +7,7 @@ include_once "$racine/modele/bd.salle.inc.php";
 include_once "$racine/modele/authentification.inc.php";
 
 // recuperation des donnees GET, POST, et SESSION
-if (isset($_POST["mailU"]) && isset($_POST["mdpU"]) && isset($_POST["nomU"])){
+if ($_POST["mailU"] != "" && $_POST["mdpU"] != "" && $_POST["nomU"] != ""){
     $mailU=$_POST["mailU"];
     $mdpU=$_POST["mdpU"];
     $nomU=$_POST["nomU"];
