@@ -4,25 +4,27 @@
     <form action="./?action=creation" method="POST">
         <div class="content">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Numéro de poste</label>
-                        <input type="text" name="nPoste" class="form-control">
+                        <input type="text" name="nPoste" class="form-control" placeholder="Ex : p42">
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Nom poste</label>
-                        <input type="text" name="nomPoste" class="form-control">
+                        <input type="text" name="nomPoste" class="form-control" placeholder="Ex : Poste 42">
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
-                        <label>Choisir le segment</label>
+                        <label>Choisir l'étage</label>
                         <select cols='100' rows='10' class="form-control" name="indIP">
                             <option></option>
                             <?php
@@ -35,10 +37,10 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Choisir le type de poste</label>
-                        <select cols='100' rows='10' class="form-control" name="typePoste">
+                        <select cols='100' rows='10' class="form-control" name="typePoste" placeholder="Unix, Windows...">
                             <option></option>
                             <?php
                                 for ($i = 0; $i < count($lesTypes); $i++) {?>
@@ -50,7 +52,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label>Choisir la salle</label>
                         <select cols='100' rows='10' class="form-control" name="nSalle">
@@ -67,7 +69,16 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Administrateur</label>
+                        <input type="text" name="ad" class="form-control" placeholder="2 chiffres...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
                     <button type="submit" value="submit" class="btn btn-dark">Créer</button>
                 </div>
             </div>

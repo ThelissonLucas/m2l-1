@@ -12,9 +12,10 @@ if (isset($_POST["nPoste"]) && isset($_POST["nomPoste"]) && isset($_POST["typePo
     $nomPoste=$_POST["nomPoste"];
     $typePoste=$_POST["typePoste"];
     $nSalle=$_POST["nSalle"];
+    $ad=$_POST['ad'];
 
     // traitement si necessaire des donnees recuperees
-    creerPoste($nomPoste, $typePoste, $nSalle, $nPoste);
+    creerPoste($nomPoste, $typePoste, $nSalle, $nPoste, $ad);
     ?>
     <div class="alert alert-success">Poste créé !</div>
 <?php
@@ -25,6 +26,7 @@ else
     $nomPoste="";
     $typePoste="";
     $nSalle="";
+    $ad="";
 }
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage

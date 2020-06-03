@@ -10,7 +10,10 @@ include_once "$racine/modele/authentification.inc.php";
 if (isset($_POST["nPoste"])){
     $nPoste=$_POST["nPoste"];
     // traitement si necessaire des donnees recuperees
-	supprimerPoste($nPoste);
+    supprimerPoste($nPoste);
+    ?>
+    <div style="position:relative;" class="alert alert-success">Poste supprimé !</div>
+<?php
 }
 else
 {
