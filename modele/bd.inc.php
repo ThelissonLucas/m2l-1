@@ -2,8 +2,8 @@
 
 function connexionPDO() {
     $login = "root";
-    $mdp = "root";
-    $bd = "p4rcinfo";
+    $mdp = "";
+    $bd = "parcinfo";
     $serveur = "127.0.0.1";
 
     try {

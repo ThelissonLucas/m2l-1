@@ -2,7 +2,7 @@
 
 function connexionPDO1() {
     $login = "root";
-    $mdp = "root";
+    $mdp = "";
     $bd = "mrbs";
     $serveur = "127.0.0.1";
 

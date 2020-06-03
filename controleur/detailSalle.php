@@ -12,7 +12,10 @@ $nSalle = $_GET["nSalle"];
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
 $uneSalle = getSalleByNum($nSalle);
 $mailU = getMailULoggedOn();
-$unPoste = getPosteBySalle($nSalle);
+
+if($uneSalle['nombrePoste'] != 0){
+    $unPoste = getPosteBySalle($nSalle);
+}
 
 // appel du script de vue qui permet de gerer l'affichage des donnees
 $titre = "Détails de la salle";
