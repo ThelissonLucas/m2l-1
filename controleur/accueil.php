@@ -2,13 +2,13 @@
 if ( $_SERVER["SCRIPT_FILENAME"] == __FILE__ ){
     $racine="..";
 }
-include_once "$racine/modele/bd.salle.inc.php";
+include_once "$racine/modele/bd.naf.inc.php";
 
 // recuperation des donnees GET, POST, et SESSION
 ;
 
 // appel des fonctions permettant de recuperer les donnees utiles a l'affichage 
-$listeSalles = getSalles();
+
 
 // traitement si necessaire des donnees recuperees
 ;
@@ -16,7 +16,7 @@ $listeSalles = getSalles();
 // appel du script de vue qui permet de gerer l'affichage des donnees
 $titre = "Liste des salles répertoriées";
 include "$racine/vue/entete.html.php";
-include "$racine/vue/vueListeSalles.php";
+include "$racine/vue/vueAccueil.php";
 include "$racine/vue/pied.html.php";
 
 

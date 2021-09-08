@@ -14,20 +14,7 @@
     <body>
     <nav>
 
-            <ul id="menuGeneral">
-
-                <li id="logo"><a href="./?action=accueil"><img src="images/logoBarre.png" alt="logo" /></a></li>
-                <li><a href="./?action=listeSalles">Liste salles </a></li>               
-                <?php
-                if(isLoggedOn()){ ?>
-                    <li><a href="./?action=profil"><img src="images/profil.png" alt="loupe" />Mon Profil</a></li>
-                <?php
-                } 
-                else{ ?>
-                    <li><a href="./?action=connexion"><img src="images/profil.png" alt="loupe" />Connexion</a></li>
-                <?php
-                } ?>
-                
+            <ul id="menuGeneral">    
             </ul>
     </nav>
 
